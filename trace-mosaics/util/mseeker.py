@@ -35,6 +35,12 @@ i couldnt find this anywhere else so i did it myself please dont judge
 when i code i dont comment, mainly becuase i realised if i dont comment ill look at everything agian and make changes with any new knowledge ive gained and usually turns out better then when i make comments.  im a bad programer and unfortanatly if your looking for mosiac detectors thats not ai i was the only one who attempted, feel free to fork or help me learn and improve this.  If you fork please give me credit and also let me know so i can see and learn from what you did differently.  when you credit me i am not claiming your work but rather i wanna see who i inspired and i wanna see this project through.
 
 this works by shifting pixels left and down and look for "spikes" within the rgb spectrum and assumes it as possible mosiac areas, then i clean the noises out and verify the best looking possible data which is the biggest list then verify smaller ones and if fails then remove it and if other groups succeeds then add that as verified and add missing lines incase of missed spikes which would happen if mosiac squares are same colors as its partners.  there is a lot of margin of erros and set sizes becuase i wanted it to be automatic but got lazy once i realise that this project was fighting be for every electron my pc breathes.  so now its simi automatic where you MIGHT need to change some numbers around.
+
+
+to save your time the most you will have to look for is in cleaner or grouping.  
+test is to setup the procesing and add rough lines
+cleaner is used to clean up noisyness via clustered lines
+grouping is the verification and adding of lines
 """
 def cleaner(x_grid, gap_threshold=10):
     if not x_grid:
